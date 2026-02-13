@@ -9,13 +9,3 @@ module.exports = {
         sameSite: "strict"
     }
 };
-
-module.exports = config;
-
-const config = require("./config");
-const mongoose = require("mongoose");
-
-mongoose.connect(config.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
