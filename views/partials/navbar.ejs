@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="/articles">📝 BlogPlatform</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/articles" class="nav-link">All Articles</a></li>
+      <li><a href="/my" class="nav-link">My Articles</a></li>
+      <li><a href="/create" class="nav-link">Create</a></li>
+    </ul>
+
+    <div class="nav-user">
+      <% if (typeof user !=='undefined' && user) { %>
+        <span class="user-info">
+          <span class="username">
+            <%= user.username %>
+          </span>
+          <% if (user.role==='admin' ) { %>
+            <span class="badge badge-admin">Admin</span>
+            <% } else { %>
+              <span class="badge badge-user">User</span>
+              <% } %>
+        </span>
+        <a href="/logout" class="btn btn-logout">Logout</a>
+        <% } %>
+    </div>
+  </div>
+</nav>

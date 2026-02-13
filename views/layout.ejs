@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= typeof title !=='undefined' ? title : 'Blog Platform' %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <% if (typeof user !=='undefined' && user) { %>
+        <%- include('partials/navbar') %>
+            <% } %>
+
+                <main class="container">
+                    <%- body %>
+                </main>
+
+                <footer class="footer">
+                    <p>&copy; 2026 Blog Platform. Built with JWT Authentication & Role-Based Access.</p>
+                </footer>
+</body>
+
+</html>

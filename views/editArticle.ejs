@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Article - Blog Platform</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+
+        <main class="container">
+            <div class="form-container">
+                <h1>Edit Article</h1>
+
+                <form method="post" action="/update/<%= article._id %>" class="article-form">
+                    <div class="form-group">
+                        <label for="title">Article Title</label>
+                        <input type="text" id="title" name="title" value="<%= article.title %>"
+                            placeholder="Enter an engaging title" required autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="content" name="content" rows="12" placeholder="Write your article content here..."
+                            required><%= article.content %></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Update Article</button>
+                        <a href="/articles" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Blog Platform. Built with JWT Authentication & Role-Based Access.</p>
+        </footer>
+</body>
+
+</html>
