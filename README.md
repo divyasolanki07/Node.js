@@ -2,9 +2,6 @@
 
 > A modern, full-featured blog application with JWT authentication, role-based access control, and beautiful UI
 
-![Status](https://img.shields.io/badge/status-ready-success)
-![Score](https://img.shields.io/badge/implementation-50%2F50-brightgreen)
-
 ## ✨ Features
 
 - 🔐 **JWT Authentication** - Secure token-based auth with HTTP-only cookies
